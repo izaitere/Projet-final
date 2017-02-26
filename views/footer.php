@@ -1,6 +1,5 @@
 <footer>
     <?php
-
-
     ?>
+
 </footer>
