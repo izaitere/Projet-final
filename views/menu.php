@@ -23,4 +23,10 @@
             <li><a href="apropos.php">A Propos</a></li>
         </ul>
     </nav>
+    <div>
+    <form action="" method="post" id="search_mini_form">
+        <input type="search" name="text" id="" value="" placeholder="Rechercher">
+        <a href="catalogue.php"><img src="images/loupe.png" alt="loupe"></a>
+    </form>
+    </div>
 
