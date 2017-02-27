@@ -76,19 +76,23 @@ require_once 'views/header.php';
                 <section id="art" class="row col-16">
                     <article class="col-4">
                         <h2>Bouquet Blanc</h2>
+                        <img src="images/mariage1.jpg" alt="bouquet mariage">
                         <p>Bouquet de la mariée</p>
                     </article>
                     <article class="col-4">
                         <h2>Bouquet Pinky</h2>
+                        <img src="images/saint-valentin1.jpg" alt="bouquet saint valentin">
                         <p>Bouquet Saint Valentin</p>
                     </article>
 
                     <article class="col-4">
                         <h2>Bouquet Ivoire</h2>
+                        <img src="images/anniversaire1.jpg" alt="bouquet anniversaire">
                         <p>Bouquet Anniversaire</p>
                     </article>
                     <article class="col-4">
                         <h2>Bouquet Passion</h2>
+                        <img src="images/naissance1.jpg" alt="bouquet naissance">
                         <p>Bouquet Naissance.</p>
                     </article>
                 </section>
