@@ -76,17 +76,19 @@ require_once 'views/header.php';
             <aside class="col-4">
                 <h2>Thèmes</h2>
                 <ul>
-                    <li>Mariage</li>
-                    <li>Naissance</li>
-                    <li>Anniversaires</li>
-                    <li>Fêtes des mères</li>
-                    <li>Saint Valentin</li>
+                    <li><a href="index.php?catid=1">Mariage</a></li>
+                   <li><a href="index.php?catid=2">Fiancailles</a></li>
+                    <li><a href="index.php?catid=3">Naissance</a></li>
+                    <li><a href="index.php?catid=4">Fêtes des mères</a></li>
+                    <li><a href="index.php?catid=5">Convalescence</li>
+                    <li><a href="index.php?catid=6">Deuil</li>
+                    <li><a href="index.php?catid=7">Anniversaires</li>
+                    <li><a href="index.php?catid=8">Occasions Spéciales</li>
+                    <li><a href="index.php?catid=9">Saint Valentin</li>
                     <li>Bal des initiés</li>
                     <li>Noel</li>
                     <li>Paques</li>
-                    <li>Toute occasion</li>
-                    <li>Personnalisé</li>
-                    <li>Deuil</li>
+                    <li>Votre bouquet personnalisé</li>
                 </ul>
             </aside>
             <div id="catalogue" class="col-12">
@@ -94,7 +96,6 @@ require_once 'views/header.php';
                     <?php foreach ($articles as $id => $article) { ?>
                     <article class="col-4">
                         <h2><?= utf8_encode($article['name']) ?></h2>
-                        Catégorie : <span><?= $article['category_id'] ?></span>
                         <img src="images/<?= $article['image'] ?>" alt="bouquet mariage">
                         <p><?= utf8_encode($article['description']) ?></p>
                         <div class="row shopping">
