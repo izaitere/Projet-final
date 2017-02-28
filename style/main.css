@@ -259,6 +259,7 @@ input{
 
 
 .shopping{
+    background-color: grey;
 
 }
 .shopping p{
@@ -277,4 +278,13 @@ input{
 
 .shopping a{
 
+}
+
+.res-soc{
+    text-align: center;
+}
+
+.res-soc img{
+    margin-top: 5px;
+    width: 23%;
 }

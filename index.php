@@ -39,7 +39,7 @@ require_once 'views/header.php';
                         <div class="inner">
                             <article>
                                 <div class="info"><h3>Les roses sous toutes leurs formes</h3></div>
-                                <img src="images/bouqslider16.jpg" alt="bouquet de roses multicolores">
+                                <img src="images/slider1.jpg" alt="bouquet de roses multicolores">
                             </article>
                             <article>
                                 <div class="info"><h3>Les orchidées</h3></div>
@@ -97,14 +97,21 @@ require_once 'views/header.php';
                         Catégorie : <span><?= $article['category_id'] ?></span>
                         <img src="images/<?= $article['image'] ?>" alt="bouquet mariage">
                         <p><?= utf8_encode($article['description']) ?></p>
-                        <div class="shopping">
+                        <div class="row shopping">
                         <p><?= utf8_encode($article['prix']) ?>$can</p>
                         <a href="livraison.php"><img src="images/shopping-cart.png" alt="panier"></a>
+                        </div>
+                        <div class="row res-soc">
+                            <img src="images/facebook.png" alt="facebook">
+                            <img src="images/google-plus.png" alt="google plus">
+                            <img src="images/twitter.png" alt="twitter">
+                            <img src="images/youtube.png" alt="you tube">
+
                         </div>
 
                     </article>
                     <?php } ?>
-                   
+
                 </section>
             </div>
 
