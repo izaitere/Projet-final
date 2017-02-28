@@ -97,24 +97,14 @@ require_once 'views/header.php';
                         Catégorie : <span><?= $article['category_id'] ?></span>
                         <img src="images/<?= $article['image'] ?>" alt="bouquet mariage">
                         <p><?= utf8_encode($article['description']) ?></p>
+                        <div class="shopping">
+                        <p><?= utf8_encode($article['prix']) ?>$can</p>
+                        <a href="livraison.php"><img src="images/shopping-cart.png" alt="panier"></a>
+                        </div>
+
                     </article>
                     <?php } ?>
-                    <article class="col-4">
-                        <h2>Bouquet Pinky</h2>
-                        <img src="images/saint-valentin1.jpg" alt="bouquet saint valentin">
-                        <p>Bouquet Saint Valentin</p>
-                    </article>
-
-                    <article class="col-4">
-                        <h2>Bouquet Ivoire</h2>
-                        <img src="images/anniversaire1.jpg" alt="bouquet anniversaire">
-                        <p>Bouquet Anniversaire</p>
-                    </article>
-                    <article class="col-4">
-                        <h2>Bouquet Passion</h2>
-                        <img src="images/mariage2.jpg" alt="bouquet mariage">
-                        <p>Bouquet Naissance.</p>
-                    </article>
+                   
                 </section>
             </div>
 

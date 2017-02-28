@@ -9,10 +9,10 @@
 <div class="wrapper">
     <nav>
         <ol>
-            <li><a href="compte.php">Mon compte </a></li>
-            <li><img src="images/man.png" alt="compte"></li>
             <li><a href="details.php">Mon panier </a></li>
             <li><img src="images/shopping-cart.png" alt="panier"></a></li>
+            <li><a href="compte.php">Mon compte </a></li>
+            <li><img src="images/man.png" alt="compte"></li>
         </ol>
 
         <!--<div><form action="" method="post" id="search_mini_form">
@@ -21,9 +21,9 @@
         </form>
         </div>-->
     </nav>
+    <div id="logo"><img src="images/logo-flower-design.png" alt="logo fleuriste flower design">
+    </div>
     <nav>
-        <img src="images/logo-flower-design.png" alt="logo fleuriste flower design">
-
         <ul>
 
             <li class="<?php if($page_title== 'accueil'){

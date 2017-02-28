@@ -100,27 +100,28 @@ body {
 /*---------------------------------header-----------------------------------------------------------*/
 
 nav ol{
-    position: absolute;
-    top: 0;
-    right: 10px;
+    height: 30px;
+    background-color: darkgray;
 }
 
 nav ol li{
     display: inline-block;
+    float: right;
+    padding: 5px;
 
 }
 
-nav ol li:nth-of-type(even){
-    position: relative;
-    top: 5px;
+/*nav ol li:nth-of-type(even){*/
+    /*position: relative;*/
+    /*top: 5px;*/
 
-}
+/*}*/
 
-nav ol li:nth-of-type(odd){
-    position: relative;
+/*nav ol li:nth-of-type(odd){*/
+    /*position: relative;*/
 
 
-}
+/*}*/
 
 nav ol li a{
 text-decoration: none;
@@ -153,7 +154,17 @@ nav ul li a{
     text-decoration: none;
 }
 
+#logo{
+    /*margin: 0 auto;*/
+    /*width: 300px;*/
+    clear: both;
+    text-align: center;
+    height: 120px;
 
+}
+#logo img{
+    width: 20%;
+}
 
 
 /*---------------------------------slider-----------------------------------------------------------*/
@@ -242,3 +253,28 @@ input{
 #slides .inner{
     -webkit-transition: ease-in-out;
     transition: ease-in-out;}
+
+
+/*----------------------------catalogue produits-----------------------------------------*/
+
+
+.shopping{
+
+}
+.shopping p{
+    float: left;
+    margin-left: 5px;
+
+}
+
+.shopping img[alt=panier]{
+    float: right;
+    margin-right: 5px;
+    margin-top: 10px;
+
+
+}
+
+.shopping a{
+
+}
