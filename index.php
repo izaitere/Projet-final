@@ -1,6 +1,23 @@
 <?php
-require_once 'defines.php';
 $page_title = 'Accueil';
+
+require_once 'defines.php';
+require_once('db/db_access.php');
+define('CAT_ID','catid');
+$id_cat ='';
+$where = '';
+if(array_key_exists(CAT_ID, $_GET)) {
+    if(array_key_exists($_GET[CAT_ID], $categories)) {
+        $id_cat = $_GET[CAT_ID];
+        $where  = 'WHERE category_id = ' . $id_cat;
+    }
+
+}
+var_dump('id_cat vaut'. $id_cat);
+var_dump($id_cat);
+
+$articles = get_articles($where);
+
 ?>
 
 <?php
@@ -74,11 +91,14 @@ require_once 'views/header.php';
             </aside>
             <div id="catalogue" class="col-12">
                 <section id="art" class="row col-16">
+                    <?php foreach ($articles as $id => $article) { ?>
                     <article class="col-4">
-                        <h2>Bouquet Blanc</h2>
-                        <img src="images/mariage1.jpg" alt="bouquet mariage">
-                        <p>Bouquet de la mariée</p>
+                        <h2><?= utf8_encode($article['name']) ?></h2>
+                        Catégorie : <span><?= $article['category_id'] ?></span>
+                        <img src="images/<?= $article['image'] ?>" alt="bouquet mariage">
+                        <p><?= utf8_encode($article['description']) ?></p>
                     </article>
+                    <?php } ?>
                     <article class="col-4">
                         <h2>Bouquet Pinky</h2>
                         <img src="images/saint-valentin1.jpg" alt="bouquet saint valentin">
@@ -92,7 +112,7 @@ require_once 'views/header.php';
                     </article>
                     <article class="col-4">
                         <h2>Bouquet Passion</h2>
-                        <img src="images/naissance1.jpg" alt="bouquet naissance">
+                        <img src="images/mariage2.jpg" alt="bouquet mariage">
                         <p>Bouquet Naissance.</p>
                     </article>
                 </section>
