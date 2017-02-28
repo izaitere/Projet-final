@@ -14,12 +14,6 @@
             <li><a href="compte.php">Mon compte </a></li>
             <li><img src="images/man.png" alt="compte"></li>
         </ol>
-
-        <!--<div><form action="" method="post" id="search_mini_form">
-            <input type="search" name="text" id="" value="" placeholder="Rechercher">
-            <a href="catalogue.php"><img src="images/loupe.png" alt="loupe"></a>
-        </form>
-        </div>-->
     </nav>
     <div id="logo"><img src="images/logo-flower-design.png" alt="logo fleuriste flower design">
     </div>

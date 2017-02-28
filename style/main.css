@@ -12,14 +12,16 @@ html, body, .wrapper, ul, li, ol{
     padding: 0;
 }
 html {
-    background: #FEF9C7;
+    background: #FFD0BD;
 }
 body {
     margin: 0 auto;
 }
 
 
+
 .wrapper{
+    background-color: #fff;
     width: 90%;
     margin:0 auto;
 }
@@ -101,7 +103,7 @@ body {
 
 nav ol{
     height: 30px;
-    background-color: darkgray;
+    background-color: #ADCF4F;
 }
 
 nav ol li{
@@ -139,9 +141,15 @@ img[alt=panier]{
 
 }
 
+img[alt=loupe]{
+    width: 20px;
+    height: 20px;
+
+}
+
 nav ul{
-    height: 40px;
-    background-color: greenyellow;
+    text-align: center;
+    height: 60px;
     width: 100%;
 
 }
@@ -183,11 +191,17 @@ nav ul li a{
     position: relative; /*pour les h3*/
 }
 
+
 /*h3*/
 .info h3{
-    top: 5%;
-    left: 5%;
     position: absolute;
+    width: 800px;
+    height: 50px;
+    background-color: white;
+    margin: 1px;
+    padding: 10px;
+    bottom: 0;
+    left: 40%;
 }
 /*overflow*/
 #overflow{
@@ -214,10 +228,12 @@ input{
 }
 /*on style les labels les uns a cote des autres inlineblock pour width*/
 #active label{
+    position: relative;
+    top: -150px;
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: black;
+    background-color: palevioletred;
     display: inline-block;
 }
 /*la div fait 100% donc on centre les labels*/
@@ -258,6 +274,25 @@ input{
 /*----------------------------catalogue produits-----------------------------------------*/
 
 
+#art{
+    border-left: 1px solid black;
+    margin: 10px;
+
+
+}
+
+
+
+#art article{
+    border: 1px solid black;
+    height: 460px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+#art article h2 img{
+    border: 2px solid white;
+}
+
 .shopping{
     background-color: grey;
 
@@ -288,3 +323,7 @@ input{
     margin-top: 5px;
     width: 23%;
 }
+
+
+
+

@@ -25,7 +25,7 @@ require_once 'views/page_head.php';
 require_once 'views/header.php';
 ?>
 <main>
-    <div class="wrapper">
+    <div class="row wrapper">
         <section class="row col-16">
             <section id="slider">
                 <input type="radio" name="slider" id="slide1" checked/>
@@ -74,7 +74,7 @@ require_once 'views/header.php';
         </section>
         <div class="row col-16">
             <aside class="col-4">
-                <h2>Thèmes</h2>
+                <h2><a href="index.php">Thèmes</a></h2>
                 <ul>
                     <li><a href="index.php?catid=1">Mariage</a></li>
                    <li><a href="index.php?catid=2">Fiancailles</a></li>
@@ -95,7 +95,7 @@ require_once 'views/header.php';
                 <section id="art" class="row col-16">
                     <?php foreach ($articles as $id => $article) { ?>
                     <article class="col-4">
-                        <h2><?= utf8_encode($article['name']) ?></h2>
+                        <h3><?= utf8_encode($article['name']) ?></h3>
                         <img src="images/<?= $article['image'] ?>" alt="bouquet mariage">
                         <p><?= utf8_encode($article['description']) ?></p>
                         <div class="row shopping">
