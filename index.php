@@ -13,8 +13,8 @@ if(array_key_exists(CAT_ID, $_GET)) {
     }
 
 }
-var_dump('id_cat vaut'. $id_cat);
-var_dump($id_cat);
+/*var_dump('id_cat vaut'. $id_cat);
+var_dump($id_cat);*/
 
 $articles = get_articles($where);
 

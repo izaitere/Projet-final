@@ -7,7 +7,7 @@
 aside, div, section, header, footer, nav {
     display: block;
 }
-html, body, #wrapper{
+html, body, .wrapper, ul, li, ol{
     margin: 0;
     padding: 0;
 }
@@ -19,10 +19,9 @@ body {
 }
 
 
-#wrapper{
-    width: 960px;
+.wrapper{
+    width: 90%;
     margin:0 auto;
-    background-color: #fff;
 }
 
 
@@ -100,16 +99,73 @@ body {
 
 /*---------------------------------header-----------------------------------------------------------*/
 
+nav ol{
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+nav ol li{
+    display: inline-block;
+
+}
+
+nav ol li:nth-of-type(even){
+    position: relative;
+    top: 5px;
+
+}
+
+nav ol li:nth-of-type(odd){
+    position: relative;
+
+
+}
+
+nav ol li a{
+text-decoration: none;
+}
+
+img[alt=compte]{
+    width: 20px;
+    height: 20px;
+
+}
+
+img[alt=panier]{
+    width: 20px;
+    height: 20px;
+
+}
+
+nav ul{
+    height: 40px;
+    background-color: greenyellow;
+    width: 100%;
+
+}
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+
 
 
 /*---------------------------------slider-----------------------------------------------------------*/
 
 
 /*styler les art qui cont h3 et img*/
-
+/*
 #slides{
-    width: 100%;
-}
+    !*width: 100%;*!
+    border-right: 10px solid greenyellow;
+
+}*/
 #slides article{
     width: 20%;
     float: left;

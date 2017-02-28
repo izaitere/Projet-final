@@ -80,7 +80,7 @@ INSERT INTO `articles` (`id`, `name`, `description`, `category_id`, `image`, `pr
 (38, 'Convalescence', 'Un prompt rétablissement', 5, 'convalescence6.jpg', '55'),
 (39, 'Convalescence', 'Un prompt rétablissement', 5, 'convalescence7.jpg', '55'),
 (40, 'Convalescence', 'Un prompt rétablissement', 5, 'convalescence8.jpg', '55'),
-(41, 'Deuil', 'Un prompt rétablissement', 6, 'deuil1.jpg', '45'),
+(41, 'Deuil', 'Nos sincères condoléances', 6, 'deuil1.jpg', '45'),
 (42, 'Deuil', 'Un prompt rétablissement', 6, 'deuil2.jpg', '45'),
 (43, 'Deuil', 'Un prompt rétablissement', 6, 'deuil3.jpg', '45'),
 (44, 'Deuil', 'Un prompt rétablissement', 6, 'deuil4.jpg', '45'),
