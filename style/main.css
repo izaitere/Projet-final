@@ -12,7 +12,8 @@ html, body, .wrapper, ul, li, ol{
     padding: 0;
 }
 html {
-    background: #FFD0BD;
+    background: linear-gradient(180deg, #A5C77F, white);
+
 }
 body {
     margin: 0 auto;
@@ -21,7 +22,7 @@ body {
 
 
 .wrapper{
-    background-color: #fff;
+    background: linear-gradient(silver, white);
     width: 90%;
     margin:0 auto;
 }
@@ -103,7 +104,7 @@ body {
 
 nav ol{
     height: 30px;
-    background-color: #ADCF4F;
+    background-color: #A5C77F;
 }
 
 nav ol li{
@@ -158,8 +159,12 @@ nav ul li{
     padding: 20px;
 }
 
+
 nav ul li a{
+    display: block;
     text-decoration: none;
+    padding: 8px;
+
 }
 
 #logo{
@@ -197,11 +202,21 @@ nav ul li a{
     position: absolute;
     width: 800px;
     height: 50px;
-    background-color: white;
+    background-color: lightslategrey;
+    opacity: 0.7;
     margin: 1px;
     padding: 10px;
     bottom: 0;
     left: 40%;
+    box-shadow: 10px 10px 5px #888888;
+
+}
+
+.info h3:hover{
+    background-color: red;
+    opacity: 0.5;
+    color: white;
+
 }
 /*overflow*/
 #overflow{
@@ -225,6 +240,7 @@ input{
 }
 #active label:hover{
     opacity: 0.5;
+    background-color: red;
 }
 /*on style les labels les uns a cote des autres inlineblock pour width*/
 #active label{
@@ -233,7 +249,7 @@ input{
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: palevioletred;
+    background-color: gray;
     display: inline-block;
 }
 /*la div fait 100% donc on centre les labels*/
@@ -275,7 +291,7 @@ input{
 
 
 #art{
-    border-left: 1px solid black;
+    border-left: 1px solid lightslategrey;
     margin: 10px;
 
 
@@ -284,9 +300,8 @@ input{
 
 
 #art article{
-    border: 1px solid black;
-    height: 460px;
-    box-shadow: 10px 10px 5px #888888;
+    height: 410px;
+    box-shadow: 10px 10px 5px silver;
 }
 
 #art article h2 img{
@@ -295,6 +310,7 @@ input{
 
 .shopping{
     background-color: grey;
+    height: 40px;
 
 }
 .shopping p{
@@ -317,13 +333,40 @@ input{
 
 .res-soc{
     text-align: center;
+    clear: left;
+
+
 }
 
 .res-soc img{
     margin-top: 5px;
-    width: 23%;
+    height: 30px;
+    width: 30px;
+
 }
 
+/*----------------------------catalogue produits-----------------------------------------*/
 
 
+/*
+
+aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+aside li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+*/
+
+aside li a:hover {
+    background-color: #555;
+    color: white;
+}
 

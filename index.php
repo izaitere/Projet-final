@@ -74,22 +74,105 @@ require_once 'views/header.php';
         </section>
         <div class="row col-16">
             <aside class="col-4">
-                <h2><a href="index.php">Thèmes</a></h2>
-                <ul>
-                    <li><a href="index.php?catid=1">Mariage</a></li>
-                   <li><a href="index.php?catid=2">Fiancailles</a></li>
-                    <li><a href="index.php?catid=3">Naissance</a></li>
-                    <li><a href="index.php?catid=4">Fêtes des mères</a></li>
-                    <li><a href="index.php?catid=5">Convalescence</li>
-                    <li><a href="index.php?catid=6">Deuil</li>
-                    <li><a href="index.php?catid=7">Anniversaires</li>
-                    <li><a href="index.php?catid=8">Occasions Spéciales</li>
-                    <li><a href="index.php?catid=9">Saint Valentin</li>
-                    <li>Bal des initiés</li>
-                    <li>Noel</li>
-                    <li>Paques</li>
-                    <li>Votre bouquet personnalisé</li>
-                </ul>
+
+
+                    <h2><a href="index.php">Thèmes</a></h2>
+
+                    <div id="accordion">
+
+                    <ul><a href="index.php?catid=1">Mariage</a>
+                        <li><a href="details.php">Bouquet Nature</a></li>
+                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php">Bouquet Champêtre</a></li>
+
+                    </ul>
+
+                    <ul><a href="index.php?catid=2">Fiancailles</a>
+                        <li><a href="details.php">Bouquet Nature</a></li>
+                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php">Bouquet Champêtre</a></li>
+
+                    </ul>
+
+                    <ul><a href="index.php?catid=3">Naissance</a>
+                        <li><a href="details.php">Bouquet Nature</a></li>
+                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php">Bouquet Champêtre</a></li>
+
+                    </ul>
+
+                    <ul><a href="index.php?catid=4">Fêtes des mères</a>
+                        <li><a href="details.php">Bouquet Nature</a></li>
+                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php">Bouquet Champêtre</a></li>
+
+                    </ul>
+
+                    <ul><a href="index.php?catid=5">Convalescence</a>
+                        <li><a href="details.php">Bouquet Nature</a></li>
+                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php">Bouquet Champêtre</a></li>
+
+                    </ul>
+
+                    <ul><a href="index.php?catid=6">Deuil</a>
+                        <li><a href="details.php">Bouquet Nature</a></li>
+                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php">Bouquet Champêtre</a></li>
+
+                    </ul>
+                        <a href="index.php?catid=7">Anniversaires</a>
+                    <ul>
+                        <li><a href="details.php">Bouquet Nature</a></li>
+                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php">Bouquet Champêtre</a></li>
+
+                    </ul>
+
+                    <ul><a href="index.php?catid=8">Occasions Spéciales</a>
+                        <li><a href="details.php">Bouquet Nature</a></li>
+                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php">Bouquet Champêtre</a></li>
+
+                    </ul>
+
+                    <ul><a href="index.php?catid=9">Saint Valentin</a>
+                        <li><a href="details.php">Bouquet Nature</a></li>
+                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php">Bouquet Champêtre</a></li>
+
+                    </ul>
+
+                    <ul><a href="index.php?catid=8">Bal des initiés</a>
+                        <li><a href="details.php">Bouquet Nature</a></li>
+                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php">Bouquet Champêtre</a></li>
+
+                    </ul>
+
+                    <ul><a href="index.php?catid=4">Noel</a>
+                        <li><a href="details.php">Bouquet Nature</a></li>
+                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php">Bouquet Champêtre</a></li>
+
+                    </ul>
+
+                    <ul><a href="index.php?catid=8">Paques</a>
+                        <li><a href="details.php">Bouquet Nature</a></li>
+                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php">Bouquet Champêtre</a></li>
+
+                    </ul>
+
+                    <ul><a href="index.php?catid=8">Votre bouquet personnalisé</a>
+                        <li><a href="details.php">Bouquet Nature</a></li>
+                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php">Bouquet Champêtre</a></li>
+  >
+                    </ul>
+                    </div>
+
+
             </aside>
             <div id="catalogue" class="col-12">
                 <section id="art" class="row col-16">
@@ -122,5 +205,10 @@ require_once 'views/header.php';
 <?php
 require_once 'views/footer.php';
 ?>
+<!--<script>
+    $( function() {
+        $( "#accordion" ).accordion();
+    } );
+</script>-->
 </body>
 </html>
