@@ -39,13 +39,24 @@ if($en_reception && $nom_valide && $prenom_valide){
 $email = '';
 $email_valide = true;
 
+//reception du nom
+
+$ad = '';
+$ad_valide = true;
+if(array_key_exists('saisie_ad', $_POST)) {
+    //php assure le filtrage de la chaine d entree
+    $ad = filter_input(INPUT_POST, 'saisie_ad', FILTER_SANITIZE_STRING);
+    $ad_valide = (1 === preg_match('/\w{1,}/', $ad));
+    // l antislah est un echappement
+}
+
 if(array_key_exists('saisie_email', $_POST)){
     $email = filter_input(INPUT_POST, 'saisie_email', FILTER_SANITIZE_STRING);
     //2 caracteres dont le premier est majuscule
     $email_valide = (false !== filter_var($email, FILTER_VALIDATE_EMAIL));
 }
 
-if($en_reception && $nom_valide && $prenom_valide && $email_valide){
+if($en_reception && $nom_valide && $prenom_valide && $email_valide && $ad_valide){
     //les donnees de formulaires sont valides o redirige l utilisateur
     header('location:ok.php');
     exit;
@@ -78,6 +89,36 @@ if($en_reception && $nom_valide && $prenom_valide && $email_valide){
                 <?php } ?>
             </div>
             <div>
+            <label for="tel">Télephone</label>
+            <input type="tel" name="tel" placeholder="514-332-4567" id="tel" pattern="^\(?\d{3}\)?(-| )?\d{3}(-| )?\d{4}$"/>
+            </div>
+            <div class="<?= $ad_valide ? '' : 'invalid' ?>">
+                <label for="saisie_ad">Adresse </label>
+                <input type="text" placeholder="(entrez votre nom)" id="saisie_ad" name="saisie_ad" value="<?= $ad ?>"/>
+                <?php if ( ! $ad_valide) { ?>
+                    <p>le nom doit contenir au moins un caractere</p>
+                <?php } ?>
+            </div>
+
+
+            <div>
+                <label for="cp">Code postal</label>
+                <input type="cp" name="cp" placeholder="H3S 1R4" id="cp" pattern="^[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}(\-| |){1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}$"/>
+            </div>
+            <div>
+                <label for="ville">Ville:</label>
+                <select name="ville" id="ville">
+                    <option value="-1">Choisir...</option>
+                    <option value="mo">Montréal</option>
+                    <option value="qc">Québec</option>
+                    <option value="ga">Gâtineau</option>
+                    <option value="sh">Sherbrooke</option>
+                </select>
+
+            </div>
+
+            <div>
+                <label for="commentaire">Commentaire:</label>
                 <textarea name="comment" rows="5" cols="40"></textarea>
             </div>
             <div class="radio">
@@ -88,22 +129,14 @@ if($en_reception && $nom_valide && $prenom_valide && $email_valide){
             <input type="radio" name="gender"
                 <?php if (isset($gender) && $gender == "femme") echo "checked"; ?>
                    value="femme"> Femme
-
+                <p><strong>Note:</strong>type="datetime-local"n'est pas supportée par Firefox, ou Internet Explorer 12(versions antérieures comprises).</p>
             </div>
             <div>
-                <label for="date">Date livraison </label>
-                <input type="date" name="bday">
+                Veuillez sélectionner une date et une heure précise de livraison:
+                <input type="datetime-local" name="bdaytime">
+                <input type="submit" value="Send">
             </div>
             <div>
-                <form action="/action_page.php">
-                    Enter a date before 1980-01-01:<br>
-                    <input type="date" name="bday" max="1979-12-31"><br><br>
-                    Enter a date after 2000-01-01:<br>
-                    <input type="date" name="bday" min="2000-01-02"><br><br>
-                    <input type="submit">
-                </form>
-
-                <p><strong>Note:</strong> type="date" n'est pas supportée par Firefox, ou Internet Explorer 11(versions antérieures comprises).</p>
 
                 </body>
             </div>
@@ -112,7 +145,7 @@ if($en_reception && $nom_valide && $prenom_valide && $email_valide){
 
 
             <div>
-                <input type="reset">
+                <input type="reset" value="reset">
                 <input type="submit" value="Soumettre"/>
             </div>
         </form>
