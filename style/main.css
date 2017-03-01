@@ -13,6 +13,7 @@ html, body, .wrapper, ul, li, ol{
 }
 html {
     background: linear-gradient(180deg, #A5C77F, white);
+    background-repeat: no-repeat;
 
 }
 body {
@@ -235,7 +236,7 @@ article img{
 
 /*input on va les cacher*/
 
-input{
+#slider input{
     display: none;
 }
 #active label:hover{
