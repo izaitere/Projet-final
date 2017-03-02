@@ -10,6 +10,7 @@ aside, div, section, header, footer, nav {
 html, body, .wrapper, ul, li, ol{
     margin: 0;
     padding: 0;
+    font-family: Verdana, Tahoma, Arial;
 }
 html {
     background: linear-gradient(180deg, #A5C77F, white);
@@ -20,7 +21,35 @@ body {
     margin: 0 auto;
 }
 
+/*titres*/
+h1 {
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: .5em;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    font-size: 2em;
+    font-weight: normal;
+    margin-bottom: .2em;
+}
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    margin: 0;
+    padding: 0;
+}
 
+h4{
+    margin-bottom: 1em;
+}
+p {
+    margin-bottom: 1em;
+}
+section{
+    text-align: center;
+}
 
 .wrapper{
     background: linear-gradient(silver, white);
@@ -218,17 +247,27 @@ body {
     #art img{
         max-width: 80%;
     }
+html{
+    background: linear-gradient(silver, white);
 
+}
 .wrapper{
     width: 100%;
+    background: transparent;
+}
+#logo{
+    position: absolute;
+    top: 40px;
+    right: -20px; /*ne pas changer sinon span ne marche plus masque par la div logo*/
+
 }
 
-    /*on enlève le float sur les liens du menu et on applique une largeur de 100% */
+    /*on applique une largeur de 100% */
     nav ul li {
-        float: none;
         padding: 2px !important;
+        text-align: center;
         margin: 0;
-        width: 100%;
+        width: 50%;
         border-top:1px solid #48A419;
     }
 
@@ -249,8 +288,10 @@ body {
         width: 50px; /*largeur de la rayure*/
         height: 3px; /*hauteur de la rayure*/
         margin: 8px 0; /*on les sépare*/
-        background: black; /*couleur des rayures*/
+        background: #48A419; /*couleur des rayures*/
         z-index: 99;
+        opacity: 0.7;
+
 
     }
 
@@ -264,6 +305,12 @@ body {
         display: block !important;
     }
 
+
+#slider{
+    margin-top: 150px;
+
+
+}
 
 
 
@@ -534,27 +581,43 @@ article img{
 /*----------------------------catalogue produits-----------------------------------------*/
 
 
-/*
 
 aside ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #f1f1f1;
 }
+
+aside h4{
+    display: inline-block;
+    width: 300px;
+
+
+}
+
+aside h4 a{
+    text-decoration: none;
+    color: black;
+    text-shadow: 5px 5px 5px white;
+    opacity: 0.8;
+
+
+}
+
+aside h4 a:hover {
+    background-color: red;
+    color: white;
+
+}
+
 
 aside li a {
     display: block;
     color: #000;
     text-decoration: none;
 }
-*/
 
-aside li a:hover {
-    background-color: #555;
-    color: white;
-}
 
 /*----------------------------Page contact-----------------------------------------*/
 
@@ -603,4 +666,13 @@ input[type=submit], input[type=reset] {
 
 input[type=submit]:hover, input[type=reset]:hover {
     background-color: red;
+}
+
+
+#comm-panier{
+  /*  position: absolute;
+    right: 0;*/
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
 }

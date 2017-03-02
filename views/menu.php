@@ -5,17 +5,19 @@
  * Date: 2017-01-17
  * Time: 12:02
  */
+include 'panier.php';
+
 ?>
 <div class="wrapper">
     <nav>
         <ol>
-            <li><a href="details.php">Mon panier </a></li>
-            <li><img src="images/shopping-cart.png" alt="panier"></a></li>
+            <li><a><span class="panier_count"><?= count($panier) ?><img src="images/shopping-cart.png" alt="panier"></span></a></li>
+            <li><a href="livraison.php">Mon panier </a></li>
             <li><a href="compte.php">Mon compte </a></li>
             <li><img src="images/man.png" alt="compte"></li>
         </ol>
     </nav>
-    <div id="logo"><img src="images/logo-flower-design.png" alt="logo fleuriste flower design">
+    <div id="logo"><a href="index.php"><img src="images/logo-flower-design.png" alt="logo fleuriste flower design"></a>
     </div>
     <nav>
         <div class="mobile-nav">
