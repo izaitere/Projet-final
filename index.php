@@ -73,7 +73,7 @@ require_once 'views/header.php';
             </section>
         </section>
         <div class="row col-16">
-            <aside class="col-4">
+            <aside class="col-4 col-m-4 col-s-4">
 
 
                     <h2><a href="index.php">Thèmes</a></h2>
@@ -177,15 +177,15 @@ require_once 'views/header.php';
             <div id="catalogue" class="col-12">
                 <section id="art" class="row col-16">
                     <?php foreach ($articles as $id => $article) { ?>
-                    <article class="col-4">
+                    <article class="row art col-4 col-m-8 col-s-16">
                         <h3><?= utf8_encode($article['name']) ?></h3>
                         <img src="images/<?= $article['image'] ?>" alt="bouquet mariage">
                         <p><?= utf8_encode($article['description']) ?></p>
-                        <div class="row shopping">
+                        <div class="row col-16 col-m-16 col-s-16 shopping">
                         <p><?= utf8_encode($article['prix']) ?>$can</p>
                         <a href="livraison.php"><img src="images/shopping-cart.png" alt="panier"></a>
                         </div>
-                        <div class="row res-soc">
+                        <div class="row res-soc col-m-16 col-s-16">
                             <img src="images/facebook.png" alt="facebook">
                             <img src="images/google-plus.png" alt="google plus">
                             <img src="images/twitter.png" alt="twitter">
@@ -205,10 +205,20 @@ require_once 'views/header.php';
 <?php
 require_once 'views/footer.php';
 ?>
+
+</body>
 <!--<script>
     $( function() {
         $( "#accordion" ).accordion();
     } );
 </script>-->
-</body>
+<script type="text/javascript">
+    $(function ($) {
+        $('.menu-btn').click(function () {
+            $('.responsive-menu').toggle('expand')
+
+        })
+
+    })
+</script>
 </html>

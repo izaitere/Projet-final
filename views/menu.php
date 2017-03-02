@@ -18,6 +18,15 @@
     <div id="logo"><img src="images/logo-flower-design.png" alt="logo fleuriste flower design">
     </div>
     <nav>
+        <div class="mobile-nav">
+            <!-- menu hamburger -->
+            <div class="menu-btn" id="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- END menu hamburger	 -->
+            <div class="responsive-menu">
         <ul>
 
             <li class="<?php if($page_title== 'accueil'){
@@ -27,6 +36,7 @@
             <li><a href="livraison.php">Livraison</a></li>
             <li><a href="apropos.php">A Propos</a></li>
         </ul>
+            </div>
     </nav>
 </div>
 

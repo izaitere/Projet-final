@@ -99,6 +99,192 @@ body {
 }
 
 
+/**************************/
+/*	STYLES JUSQU'A 960PX inclus**********/
+@media only screen and (max-width:960px) {
+    /*on définit des classes pour les largeurs de colonnes version tablettes*/
+    /*largeur d'1 colonne*/
+    .col-m-1 {width: 6.25%;}
+
+    /*largeur de 2 colonnes*/
+    .col-m-2 {width: 12.5%;}
+
+    /*largeur de 3 colonnes*/
+    .col-m-3 {width: 18.75%;}
+
+    /*largeur de 4 colonnes*/
+    .col-m-4 {width: 25%;}
+
+    /*largeur de 5 colonnes*/
+    .col-m-5 {width: 31.25%;}
+
+    /*largeur de 6 colonnes*/
+    .col-m-6 {width: 37.5%;}
+
+    /*largeur de 7 colonnes*/
+    .col-m-7 {width: 43.75%;}
+
+    /*largeur de 8 colonnes*/
+    .col-m-8 {width: 50%;}
+
+    /*largeur de 9 colonnes*/
+    .col-m-9 {width: 56.25%;}
+
+    /*largeur de 10 colonnes*/
+    .col-m-10 {width: 62.5%;}
+
+    /*largeur de 11 colonnes*/
+    .col-m-11 {width: 68.75%;}
+
+    /*largeur de 12 colonnes*/
+    .col-m-12 {width: 75%;}
+
+    /*largeur de 13 colonnes*/
+    .col-m-13 {width: 81.25%;}
+
+    /*largeur de 14 colonnes*/
+    .col-m-14 {width: 87.5%;}
+
+    /*largeur de 15 colonnes*/
+    .col-m-15 {width: 93.75%;}
+
+    /*largeur de 16 colonnes*/
+    .col-m-16 {width: 100%;}
+
+.art{
+    display: block;
+}
+#art img{
+    max-width: 80%;
+}
+
+
+}
+
+/***********************/
+/*STYLES POUR TÉLÉPHONES JUSQU'A 768PX INCLUS*/
+@media only screen and (max-width:768px){
+    /*on définit des classes pour les largeurs de colonnes version telephones*/
+    /*largeur d'1 colonne*/
+    .col-s-1 {width: 6.25%;}
+
+    /*largeur de 2 colonnes*/
+    .col-s-2 {width: 12.5%;}
+
+    /*largeur de 3 colonnes*/
+    .col-s-3 {width: 18.75%;}
+
+    /*largeur de 4 colonnes*/
+    .col-s-4 {width: 25%;}
+
+    /*largeur de 5 colonnes*/
+    .col-s-5 {width: 31.25%;}
+
+    /*largeur de 6 colonnes*/
+    .col-s-6 {width: 37.5%;}
+
+    /*largeur de 7 colonnes*/
+    .col-s-7 {width: 43.75%;}
+
+    /*largeur de 8 colonnes*/
+    .col-s-8 {width: 50%;}
+
+    /*largeur de 9 colonnes*/
+    .col-s-9 {width: 56.25%;}
+
+    /*largeur de 10 colonnes*/
+    .col-s-10 {width: 62.5%;}
+
+    /*largeur de 11 colonnes*/
+    .col-s-11 {width: 68.75%;}
+
+    /*largeur de 12 colonnes*/
+    .col-s-12 {width: 75%;}
+
+    /*largeur de 13 colonnes*/
+    .col-s-13 {width: 81.25%;}
+
+    /*largeur de 14 colonnes*/
+    .col-s-14 {width: 87.5%;}
+
+    /*largeur de 15 colonnes*/
+    .col-s-15 {width: 93.75%;}
+
+    /*largeur de 16 colonnes*/
+    .col-s-16 {width: 100%;}
+    .art{
+        display: block;
+    }
+    #art img{
+        max-width: 80%;
+    }
+
+.wrapper{
+    width: 100%;
+}
+
+    /*on enlève le float sur les liens du menu et on applique une largeur de 100% */
+    nav ul li {
+        float: none;
+        padding: 2px !important;
+        margin: 0;
+        width: 100%;
+        border-top:1px solid #48A419;
+    }
+
+    /*on justifie à gauche les liens */
+    nav ul li a {
+        text-align:left;
+        padding-left:5px;
+    }
+    /*on rajoute du padding pour décoller le hamburger */
+    .menu-btn {
+        padding:6px;
+    }
+
+
+    /*on style le hamburger*/
+    .menu-btn span {
+        display: block; /*les span se placent les uns sous les autres*/
+        width: 50px; /*largeur de la rayure*/
+        height: 3px; /*hauteur de la rayure*/
+        margin: 8px 0; /*on les sépare*/
+        background: black; /*couleur des rayures*/
+        z-index: 99;
+
+    }
+
+    /*on cache le menu par défaut*/
+    .responsive-menu{
+        display: none;
+    }
+
+    /*on affiche le menu qd l'utilisateur clique sur le hamburger, on ajoute la classe expand en jQuery*/
+    .expand {
+        display: block !important;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*END SYSTEME DE GRILLES*************************************************************************************/
 
 /*---------------------------------header-----------------------------------------------------------*/
@@ -173,7 +359,6 @@ nav ul li a{
     /*width: 300px;*/
     clear: both;
     text-align: center;
-    height: 120px;
 
 }
 #logo img{
@@ -306,23 +491,23 @@ article img{
 }
 
 #art article h2 img{
-    border: 2px solid white;
+    border: 1px solid darkgray;
 }
 
 .shopping{
     background-color: grey;
     height: 40px;
+    padding: 0;
 
 }
 .shopping p{
     float: left;
-    margin-left: 5px;
+    margin-left: 2px;
 
 }
 
 .shopping img[alt=panier]{
     float: right;
-    margin-right: 5px;
     margin-top: 10px;
 
 
