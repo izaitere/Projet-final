@@ -168,7 +168,7 @@ require_once 'views/header.php';
                         <li><a href="details.php">Bouquet Nature</a></li>
                         <li><a href="details.php">Bouquet Blanc</a></li>
                         <li><a href="details.php">Bouquet Champêtre</a></li>
-  >
+
                     </ul>
                     </div>
 

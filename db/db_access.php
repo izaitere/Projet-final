@@ -6,6 +6,7 @@ define('DB_HOST', '127.0.0.1'); // Host DB
 define('DB_USERNAME', 'root'); // Host DB
 define('DB_PASSWORD', ''); // Host DB
 define('DB_NAME', 'fleurs'); // Host DB
+//require_once ('defines_sentora.php');
 
 $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 if ($mysqli->connect_errno) {

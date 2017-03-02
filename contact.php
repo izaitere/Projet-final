@@ -65,7 +65,8 @@ if($en_reception && $nom_valide && $prenom_valide && $email_valide && $ad_valide
 ?>
 <main>
     <div class="wrapper">
-        <form id="formulaire" action="<?= basename(__FILE__) ?>" method="post">
+        <div id="form">
+            <form id="formulaire" action="<?= basename(__FILE__) ?>" method="post">
             <!-- method GET par defaut, POST si précisé -->
             <div class="<?= $nom_valide ? '' : 'invalid' ?>">
                 <label for="saisie_nom">Nom : </label>
@@ -94,16 +95,16 @@ if($en_reception && $nom_valide && $prenom_valide && $email_valide && $ad_valide
             </div>
             <div class="<?= $ad_valide ? '' : 'invalid' ?>">
                 <label for="saisie_ad">Adresse </label>
-                <input type="text" placeholder="(entrez votre nom)" id="saisie_ad" name="saisie_ad" value="<?= $ad ?>"/>
+                <input type="text" placeholder="(entrez votre adresse)" id="saisie_ad" name="saisie_ad" value="<?= $ad ?>"/>
                 <?php if ( ! $ad_valide) { ?>
-                    <p>le nom doit contenir au moins un caractere</p>
+                    <p>le nom doit contenir au moins huit caractere</p>
                 <?php } ?>
             </div>
 
 
             <div>
                 <label for="cp">Code postal</label>
-                <input type="cp" name="cp" placeholder="H3S 1R4" id="cp" pattern="^[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}(\-| |){1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}$"/>
+                <input type="number" name="cp" placeholder="H3S 1R4" id="cp" pattern="^[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}(\-| |){1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}$"/>
             </div>
             <div>
                 <label for="ville">Ville:</label>
@@ -118,7 +119,7 @@ if($en_reception && $nom_valide && $prenom_valide && $email_valide && $ad_valide
             </div>
 
             <div>
-                <label for="commentaire">Commentaire:</label>
+                <label id="comment" for="commentaire">Commentaire:</label>
                 <textarea name="comment" rows="5" cols="40"></textarea>
             </div>
             <div class="radio">
@@ -134,11 +135,9 @@ if($en_reception && $nom_valide && $prenom_valide && $email_valide && $ad_valide
             <div>
                 Veuillez sélectionner une date et une heure précise de livraison:
                 <input type="datetime-local" name="bdaytime">
-                <input type="submit" value="Send">
             </div>
             <div>
 
-                </body>
             </div>
 
 
@@ -149,6 +148,7 @@ if($en_reception && $nom_valide && $prenom_valide && $email_valide && $ad_valide
                 <input type="submit" value="Soumettre"/>
             </div>
         </form>
+        </div>
 </main>
 <?php
 require_once 'views/footer.php';
