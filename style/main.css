@@ -676,3 +676,32 @@ input[type=submit]:hover, input[type=reset]:hover {
     height: 30px;
     border: 1px solid black;
 }
+
+
+input[name=panier_remove]{
+    width: 70px;
+    display: block;
+    color: black;
+}
+
+
+#details{
+    border: none;
+    text-align: center;
+    border-collapse: collapse;
+
+}
+
+#details th{
+    background-color: gray;
+    height: 40px;
+}
+#details tr:nth-of-type(2n+1){
+    background-color: beige;
+    height: 40px;
+}
+
+#details tr:nth-of-type(2n){
+    background-color: silver;
+    height: 40px;
+}
