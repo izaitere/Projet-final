@@ -13,7 +13,8 @@ html, body, .wrapper, ul, li, ol{
     font-family: Verdana, Tahoma, Arial;
 }
 html {
-    background: linear-gradient(180deg, #A5C77F, white);
+    background: linear-gradient(silver, white);
+
     background-repeat: no-repeat;
 
 }
@@ -52,9 +53,11 @@ section{
 }
 
 .wrapper{
-    background: linear-gradient(silver, white);
     width: 90%;
     margin:0 auto;
+}
+.main{
+
 }
 
 
@@ -188,6 +191,8 @@ section{
 }
 
 
+
+
 }
 
 /***********************/
@@ -307,11 +312,32 @@ html{
 
 
 #slider{
-    margin-top: 150px;
+    width: 100%;
+    position: absolute;
+    top: 300px;
 
 
 }
 
+.info h3{
+    font-size: 1rem;
+    }
+
+.main{
+    position: relative;
+    top: 300px;
+}
+
+#form{
+    position: absolute;
+    top: 300px;
+}
+#formulaire input{
+    width: 100%;
+}
+#formulaire label{
+    font-size: 1.2rem;
+}
 
 
 }
@@ -359,15 +385,27 @@ nav ol li{
 
 
 /*}*/
+header
 
 nav ol li a{
 text-decoration: none;
+    display: block;
+    color: black;
+}
+
+nav ol li a:hover{
+    color: red;
+    font-weight: bold;
 }
 
 img[alt=compte]{
     width: 20px;
     height: 20px;
 
+}
+
+header{
+    height: 250px;
 }
 
 img[alt=panier]{
@@ -384,19 +422,29 @@ img[alt=loupe]{
 
 nav ul{
     text-align: center;
+    padding-bottom: 20px;
+
     height: 60px;
     width: 100%;
 
 }
 nav ul li{
     display: inline-block;
-    padding: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+
 }
 
 
 nav ul li a{
     display: block;
     text-decoration: none;
+    display: block;
+    line-height: 40px;
+    color:red;
+    font-weight: bold;
+    height: 40px;
+    text-align:center;
     padding: 8px;
 
 }
@@ -412,6 +460,10 @@ nav ul li a{
     width: 20%;
 }
 
+.active{
+    border-bottom: 5px solid black;
+}
+
 
 /*---------------------------------slider-----------------------------------------------------------*/
 
@@ -423,6 +475,10 @@ nav ul li a{
     border-right: 10px solid greenyellow;
 
 }*/
+
+#slider{
+    height: 550px;
+}
 #slides article{
     width: 20%;
     float: left;
@@ -433,14 +489,14 @@ nav ul li a{
 /*h3*/
 .info h3{
     position: absolute;
-    width: 800px;
-    height: 50px;
+
+    width: 80%;
+    height: 15%;
     background-color: lightslategrey;
     opacity: 0.7;
     margin: 1px;
     padding: 10px;
     bottom: 0;
-    left: 40%;
     box-shadow: 10px 10px 5px #888888;
 
 }
@@ -542,16 +598,28 @@ article img{
 }
 
 .shopping{
-    background-color: grey;
+    background-color: silver;
     height: 40px;
     padding: 0;
 
 }
 .shopping p{
-    float: left;
-    margin-left: 2px;
+    padding-left: 10px;
+    margin-top: 10px;
+
 
 }
+
+#comm-panier{
+    /*  position: absolute;
+      right: 0;*/
+    margin-top: 10px;
+    width: 70px;
+    height: 20px;
+    background: transparent;
+
+}
+
 
 .shopping img[alt=panier]{
     float: right;
@@ -580,23 +648,40 @@ article img{
 
 /*----------------------------catalogue produits-----------------------------------------*/
 
+aside{
+    width: 100%;
+    padding: 10px;
+}
 
+aside h3 a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+aside h3 a:hover{
+
+    color: green;
+}
 
 aside ul {
     list-style-type: none;
-    margin: 0;
+    margin: 5px 0 0 0;
+    background-color: #EDF7F2;
+    border-radius: 5px;
+
     padding: 0;
-    width: 100%;
 }
 
-aside h4{
-    display: inline-block;
-    width: 300px;
-
-
+aside ul h4{
+    margin: 0;
+    margin-left: 10px;
+    padding-top: 10px;
 }
 
-aside h4 a{
+aside ul a{
+    display: block;
+    height: 30px;
     text-decoration: none;
     color: black;
     text-shadow: 5px 5px 5px white;
@@ -605,12 +690,17 @@ aside h4 a{
 
 }
 
-aside h4 a:hover {
-    background-color: red;
-    color: white;
+aside ul a:hover {
+    color: green;
+    /*
+    background-color: #A5C77F;
+    */
 
 }
+aside li{
 
+    margin-left: 20px;
+}
 
 aside li a {
     display: block;
@@ -653,7 +743,7 @@ input[type=text], select,input[type=tel],input[type=number],input[type=datetime-
     box-sizing: border-box;
 }
 
-input[type=submit], input[type=reset] {
+#contact, input[type=reset] {
     margin-left: 50px;
     width: 30%;
     background-color: silver;
@@ -664,18 +754,12 @@ input[type=submit], input[type=reset] {
     cursor: pointer;
 }
 
-input[type=submit]:hover, input[type=reset]:hover {
+#contact:hover, input[type=reset]:hover {
     background-color: red;
 }
 
+/*----------------------------Page livraison-----------------------------------------*/
 
-#comm-panier{
-  /*  position: absolute;
-    right: 0;*/
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
-}
 
 
 input[name=panier_remove]{

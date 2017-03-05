@@ -31,11 +31,6 @@ if(array_key_exists('saisie_prenom', $_POST)){
     $prenom_valide = (1 === preg_match('/[A-Z]\w{1,}/', $prenom));
 }
 
-if($en_reception && $nom_valide && $prenom_valide){
-    //les donnees de formulaires sont valides o redirige l utilisateur
-    header('location:ok.php');
-    exit;
-}
 $email = '';
 $email_valide = true;
 
@@ -104,7 +99,7 @@ if($en_reception && $nom_valide && $prenom_valide && $email_valide && $ad_valide
 
             <div>
                 <label for="cp">Code postal</label>
-                <input type="number" name="cp" placeholder="H3S 1R4" id="cp" pattern="^[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}(\-| |){1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}$"/>
+                <input type="tel" name="cp" placeholder="H3S 1R4" id="cp" pattern="^[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}(\-| |){1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}$"/>
             </div>
             <div>
                 <label for="ville">Ville:</label>
@@ -145,7 +140,7 @@ if($en_reception && $nom_valide && $prenom_valide && $email_valide && $ad_valide
 
             <div>
                 <input type="reset" value="reset">
-                <input type="submit" value="Soumettre"/>
+                <input id="contact" type="submit" value="Soumettre"/>
             </div>
         </form>
         </div>
