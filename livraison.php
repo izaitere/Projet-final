@@ -13,6 +13,7 @@ require_once 'panier.php';
 <main>
     <div class="row wrapper">
 
+
         <div class="col-16 panier-lis">
             <?php if ( ! empty($panier)) { // Des items sont présents ?>
             <table id="details" class="panier_liste col-8 col-m-16">
@@ -21,7 +22,6 @@ require_once 'panier.php';
                     <th>Quantité</th>
                     <th>Supprimer du panier</th>
                 </tr>
-<!--            <ul class="panier_liste">-->
                     <?php foreach ($panier as $article_id => $article) { ?>
                         <tr>
                         <td class="panier_article">
@@ -37,12 +37,11 @@ require_once 'panier.php';
                                 <input type="hidden" name="article_id" value="<?=$article_id?>"/>
                             </form></td></tr>
                     <?php } ?>
-<!--                </ul>-->
 
             </table>
                 <form class="col-4 panier_action" method="post">
                     <input type="submit" name="panier_empty" value="vider le panier">
-                    <span><a href="contact.php">Livraison</a> </span>
+                    <span><a class="liens" href="contact.php">Livraison</a></span>
                 </form>
             <?php } else { // panier vide ?>
                 <p>Votre panier est vide.</p>

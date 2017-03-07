@@ -693,7 +693,7 @@ article img{
 /*on style les labels les uns a cote des autres inlineblock pour width*/
 #active label{
     position: relative;
-    top: -150px;
+    top: 30px;
     width: 10px;
     height: 10px;
     border-radius: 5px;
@@ -744,7 +744,6 @@ article img{
 
 
 }
-
 
 
 #art article{
@@ -984,7 +983,6 @@ textarea{
 
 
 input[name=panier_remove]{
-    display: block;
     color: black;
 }
 
@@ -1037,3 +1035,71 @@ footer p{
     font-size: 0.8rem;
     font-weight: bold;
 }
+
+
+/*----------------------------liens----------------------------------------*/
+.liens{
+    display:block ;
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    border:1px solid white ;
+    border-radius: 1px;
+}
+
+/*----------------compte-------------*/
+
+
+.content_form{
+    background-color: #FFFFFF;
+}
+.field_form{
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+.form_compte{
+    width: 100%;
+}
+.form_compte input{
+    background-color:#999;
+    border: none;
+    box-shadow: none;
+}
+.content_form .col_gauche, .col_droite{
+    padding: 2%;
+}
+.col_droite{
+    border-left: 2px solid gray;
+}
+
+input#email, #pass {
+    border-radius: 0;
+    width: 100%;
+    height: 30px;
+    border:1px solid #a2a2a2;
+    margin: 0 0 12px 0;
+    padding-left: 2%;
+    background: #fff
+}
+.mot_passe span{
+    color: red;
+}
+.mon_email span{
+    color: red;
+}
+.green-link{
+    font-size: 0.7rem;
+    color: #4c5940;
+}
+.submit{
+    background-color: #3a9a34;
+    cursor: pointer;
+    color: #FFFFFF;
+    border: none;
+    height: 40px;
+    width: 100%;
+}
+
+

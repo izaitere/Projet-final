@@ -61,10 +61,9 @@ include 'panier.php';
             <li class="<?php if($page_title== 'accueil'){
                  echo 'active'; } ?> "  ><a href="index.php">Accueil</a></li>
             <li><a href="livraison.php">Livraison</a></li>
-
-            <li><a href="compte.php">Mon Compte</a></li>
             <li><a href="contact.php">Contact</a></li>
-            <li><a href="apropos.php">A Propos</a></li>
+            <li><a href="compte.php">Mon Compte</a></li>
+            <li><a href="#">A Propos</a></li>
         </ul>
             </div>
     </nav>

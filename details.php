@@ -20,7 +20,7 @@ if(array_key_exists(CAT_ID, $_GET)) {
 var_dump($id_cat);*/
 
 
- var_dump($_GET);
+/* var_dump($_GET);*/
 $id_art ='';
 $where = '';
 if(array_key_exists(ARTICLE_ID, $_GET)) {
@@ -45,7 +45,6 @@ $articles = get_articles($where);
         <section class="col-16 col-m-16 main row">
                         <h2 class="col-16"><?= utf8_encode($articles[$_GET[ARTICLE_ID]]['name'])?></h2>
             <div id="defilement" class="row col-8 col-m-8">
-
             Article : <span><?= $articles[$_GET[ARTICLE_ID]]['id'] ?></span>
                         <img class="col-8 col-m-8 col-s-16" src="images/<?= $articles[$_GET[ARTICLE_ID]]['image'] ?>" alt="fleurs">
                         <?= utf8_encode($articles[$_GET[ARTICLE_ID]]['description']) ?>
@@ -57,16 +56,12 @@ $articles = get_articles($where);
                         <input type="hidden" name="article_name" value="<?=utf8_encode($articles[$_GET[ARTICLE_ID]]['name'])?>"/>
                     </form>
                         <div class="col-16" id="liens_details">
-                        <a class="col-7" id="bouton_details" href="livraison.php">Récupérer ma commande </a>
-                        <a class="col-7" id="bouton_retour" href="index.php">Continuer mes achats </a>
+                        <a class="liens col-7" id="bouton_details" href="livraison.php">Récupérer ma commande </a>
+                        <a class="liens col-7" id="bouton_retour" href="index.php">Continuer mes achats </a>
                     </div>
                     </div>
 
-
-
-
-
-                        <!--<button id="bouton_details" type="submit" class="bouton-ajouter"><img src="images/icone_ajouter.png" alt="icone" /><p>Ajouter au panier</p></button>-->
+                       <!--<button id="bouton_details" type="submit" class="bouton-ajouter"><img src="images/icone_ajouter.png" alt="icone" /><p>Ajouter au panier</p></button>-->
                     </article>
          </section>
     </div>
