@@ -10,7 +10,7 @@ aside, div, section, header, footer, nav {
 html, body, .wrapper, ul, li, ol{
     margin: 0;
     padding: 0;
-    font-family: Verdana, Tahoma, Arial;
+    font-family: 'Open Sans', sans-serif;
 }
 html {
     background: linear-gradient(silver, white);
@@ -187,8 +187,11 @@ section{
     display: block;
 }
 #art img{
-    max-width: 80%;
+    max-width: 90%;
 }
+#art article{
+        min-height: 450px;
+    }
 
 
 
@@ -312,9 +315,7 @@ html{
 
 
 #slider{
-    width: 100%;
-    position: absolute;
-    top: 300px;
+    display: none;
 
 
 }
@@ -323,7 +324,7 @@ html{
     font-size: 1rem;
     }
 
-.main{
+/*.main{
     position: relative;
     top: 300px;
 }
@@ -331,12 +332,31 @@ html{
 #form{
     position: absolute;
     top: 300px;
-}
+}*/
 #formulaire input{
     width: 100%;
 }
 #formulaire label{
     font-size: 1.2rem;
+    width: 100% !important;
+}
+
+#formulaire label sup, sup{
+    font-size: 0.6rem;
+}
+
+
+div#form{
+    margin: 0;
+
+}
+
+nav ul{
+    height: auto !important;
+
+}
+header{
+    height: auto !important;
 }
 
 
@@ -369,7 +389,7 @@ nav ol{
 
 nav ol li{
     display: inline-block;
-    float: right;
+    float: left;
     padding: 5px;
 
 }
@@ -391,6 +411,12 @@ nav ol li a{
 text-decoration: none;
     display: block;
     color: black;
+    font-size: 0.9rem;
+
+}
+
+nav ol li a span{
+
 }
 
 nav ol li a:hover{
@@ -399,8 +425,8 @@ nav ol li a:hover{
 }
 
 img[alt=compte]{
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 
 }
 
@@ -423,7 +449,6 @@ img[alt=loupe]{
 nav ul{
     text-align: center;
     padding-bottom: 20px;
-
     height: 60px;
     width: 100%;
 
@@ -449,6 +474,16 @@ nav ul li a{
 
 }
 
+nav ul li a:hover{
+    color: green;
+
+
+}
+nav ul li a:active{
+    border-bottom: 2px solid green;
+}
+
+
 #logo{
     /*margin: 0 auto;*/
     /*width: 300px;*/
@@ -462,6 +497,130 @@ nav ul li a{
 
 .active{
     border-bottom: 5px solid black;
+}
+
+
+
+
+
+/*modal box pour login*/
+#id01{
+    width: 400px;
+}
+
+/* Full-width input fields */
+.modallog, #use_name {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 20px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: orange;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: orange;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
 }
 
 
@@ -646,11 +805,15 @@ article img{
 
 }
 
-/*----------------------------catalogue produits-----------------------------------------*/
+/*----------------------------aside-----------------------------------------*/
 
 aside{
     width: 100%;
     padding: 10px;
+}
+
+aside h3{
+    font-size: 1rem;
 }
 
 aside h3 a{
@@ -681,7 +844,6 @@ aside ul h4{
 
 aside ul a{
     display: block;
-    height: 30px;
     text-decoration: none;
     color: black;
     text-shadow: 5px 5px 5px white;
@@ -707,6 +869,18 @@ aside li a {
     color: #000;
     text-decoration: none;
 }
+/*----------------------------Page details-----------------------------------------*/
+
+#bouton_details a, #bouton_retour a{
+    display: block;
+    line-height: 40px;
+    height: 40px;
+    /*background-color: #FD9700;*/
+    text-align:center;
+}
+
+
+
 
 
 /*----------------------------Page contact-----------------------------------------*/
@@ -717,37 +891,78 @@ div#form {
     padding: 20px;
     margin: 20px;
 }
-#form label{
+#formulaire label{
     display: inline-block;
     width: 30%;
     text-align: left;
     margin-left: 30px;
 }
 
+#formulaire label sup, sup{
+    color: red;
+}
+
 input[type=radio]{
-    width: 50%;
+    width: 20%;
+    margin: 10px;
     padding: 12px 20px;
-    margin: 8px 0;
     display: inline-block;
     box-sizing: border-box;
 }
 
-input[type=text], select,input[type=tel],input[type=number],input[type=datetime-local] {
+#rad1, #rad2{
+    width: 100%;
+}
+
+input[type=text], select,input[type=tel],input[type=number]{
     box-shadow: 2px 2px 5px silver inset;
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid gray;
     border-radius: 4px;
     box-sizing: border-box;
 }
 
+input[type=datetime-local]{
+    box-shadow: 2px 2px 5px silver inset;
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label#comment{
+    display: inline-block;
+    width: 50%;
+}
+
+
+
+textarea{
+    width: 50%;
+    box-shadow: 2px 2px 5px silver inset;
+    margin: 8px 0;
+    border: 1px solid gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
 #contact, input[type=reset] {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    /*
     margin-left: 50px;
-    width: 30%;
+    */
+    margin-top: 15px;
+    width: 20%;
     background-color: silver;
-    color: white;
     padding: 14px 20px;
     border: none;
     border-radius: 4px;
@@ -758,12 +973,17 @@ input[type=text], select,input[type=tel],input[type=number],input[type=datetime-
     background-color: red;
 }
 
+.invalid p{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: green;
+}
+
 /*----------------------------Page livraison-----------------------------------------*/
 
 
 
 input[name=panier_remove]{
-    width: 70px;
     display: block;
     color: black;
 }
@@ -771,21 +991,49 @@ input[name=panier_remove]{
 
 #details{
     border: none;
+
     text-align: center;
     border-collapse: collapse;
 
 }
 
-#details th{
+table th{
     background-color: gray;
-    height: 40px;
 }
 #details tr:nth-of-type(2n+1){
-    background-color: beige;
+    /*background-color: beige;*/
+
     height: 40px;
 }
 
 #details tr:nth-of-type(2n){
+
     background-color: silver;
-    height: 40px;
+}
+
+
+
+/*----------------------------footer----------------------------------------*/
+
+
+
+footer .bloc {
+    height:40px;
+    line-height:40px;
+    width:100%;
+    float:left;
+}
+
+footer .bloc a {
+    color:black;
+    text-decoration:none;
+}
+footer .bloc a:hover {
+    text-decoration:underline;
+    color: green;
+}
+
+footer p{
+    font-size: 0.8rem;
+    font-weight: bold;
 }

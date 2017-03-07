@@ -81,57 +81,45 @@ $articles = get_articles($where);
                     <div id="accordion">
 
                     <ul><h4><a href="index.php?catid=1">Mariage</a></h4>
-                        <li><a href="details.php">Bouquet Nature</a></li>
-                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php?id_art=1">Bouquet Nature</a></li>
+                        <li><a href="details.php?id_art=2">Bouquet Blanc</a></li>
                     </ul>
-
                     <ul><h4><a href="index.php?catid=2">Fiancailles</a></h4>
-                        <li><a href="details.php">Bouquet Blanc</a></li>
-                        <li><a href="details.php">Bouquet Champêtre</a></li>
+                        <li><a href="details.php?id_art=9">Bouquet Blanc</a></li>
+                        <li><a href="details.php?id_art=10">Bouquet Champêtre</a></li>
                     </ul>
-
                     <ul><h4><a href="index.php?catid=3">Naissance</a></h4>
-                        <li><a href="details.php">Bouquet happy</a></li>
-                        <li><a href="details.php">Bouquet Champêtre</a></li>
+                        <li><a href="details.php?id_art=16">Bouquet happy</a></li>
+                        <li><a href="details.php?id_art=17">Bouquet Champêtre</a></li>
                     </ul>
-
                     <ul><h4><a href="index.php?catid=4">Fête des mères</a></h4>
-                         <li><a href="details.php">Bouquet happy</a></li>
-                         <li><a href="details.php">Bouquet Champêtre</a></li>
+                         <li><a href="details.php?id_art=23">Bouquet happy</a></li>
+                         <li><a href="details.php?id_art=24">Bouquet Champêtre</a></li>
                     </ul>
-
-
-                    <ul><h4><a href="index.php?catid=5">Convalescence</a></h4>
-                        <li><a href="details.php">Bouquet Blanc</a></li>
-                        <li><a href="details.php">Bouquet Champêtre</a></li>
+                   <ul><h4><a href="index.php?catid=5">Convalescence</a></h4>
+                        <li><a href="details.php?id_art=30">Bouquet Blanc</a></li>
+                        <li><a href="details.php?id_art=31">Bouquet Champêtre</a></li>
                     </ul>
-
                     <ul><h4><a href="index.php?catid=6">Deuil</a></h4>
-                        <li><a href="details.php">Bouquet Nature</a></li>
-                        <li><a href="details.php">Bouquet Blanc</a></li>
-                        <li><a href="details.php">Bouquet Champêtre</a></li>
-
+                        <li><a href="details.php?id_art=44">Bouquet Nature</a></li>
+                        <li><a href="details.php?id_art=45">Bouquet Blanc</a></li>
+                        <li><a href="details.php?id_art=46">Bouquet Champêtre</a></li>
                     </ul>
-
                     <ul><h4><a href="index.php?catid=7">Anniversaires</a></h4>
-                        <li><a href="details.php">Bouquet Nature</a></li>
-                        <li><a href="details.php">Bouquet Champêtre</a></li>
+                        <li><a href="details.php?id_art=51">Bouquet Nature</a></li>
+                        <li><a href="details.php?id_art=52">Bouquet Champêtre</a></li>
                     </ul>
-
                     <ul><h4><a href="index.php?catid=8">Occasions Spéciales</a></h4>
-                        <li><a href="details.php">Bouquet Nature</a></li>
-                        <li><a href="details.php">Bouquet Blanc</a></li>
+                        <li><a href="details.php?id_art=58">Bouquet Nature</a></li>
+                        <li><a href="details.php?id_art=59">Bouquet Blanc</a></li>
                     </ul>
-
                     <ul><h4><a href="index.php?catid=9">Saint Valentin</a></h4>
-                        <li><a href="details.php">Bouquet Nature</a></li>
-                        <li><a href="details.php">Bouquet Champêtre</a></li>
+                        <li><a href="details.php?id_art=65">Bouquet Nature</a></li>
+                        <li><a href="details.php?id_art=66">Bouquet Champêtre</a></li>
                     </ul>
-
                     <ul><h4><a href="index.php?catid=4">Noel</a></h4>
-                        <li><a href="details.php">Bouquet Nature</a></li>
-                        <li><a href="details.php">Bouquet Blanc</a></li>
-
+                        <li><a href="details.php?id_art=72">Bouquet Nature</a></li>
+                        <li><a href="details.php?id_art=73">Bouquet Blanc</a></li>
                     </ul>
 
 
@@ -142,11 +130,11 @@ $articles = get_articles($where);
                     <?php foreach ($articles as $id => $article) { ?>
                     <article class="row art col-4 col-m-8 col-s-16">
                         <h4><?= utf8_encode($article['name']) ?></h4>
-                       <a href="details.php<?= '?id_art=$id' ?>"><img src="images/<?= $article['image'] ?>" alt="bouquet mariage"></a>
+                       <a href="details.php?id_art=<?= $id ?>"><img src="images/<?= $article['image'] ?>" alt="bouquet mariage"></a>
                         <p><?= utf8_encode($article['description']) ?></p>
                         <div class="row col-16 col-m-16 col-s-16 shopping">
                         <p class="col-8 col-m-8 col-s-8"><?= utf8_encode($article['prix']) ?>$can</p>
-                         <span class="col-8 col-m-8 col-s-8" ><a href="livraison.php"><img src="images/shopping-cart.png" alt="panier"></a></span>
+                         <span class="col-8 col-m-8 col-s-8" ><a href="details.php"><img src="images/shopping-cart.png" alt="panier"></a></span>
 
                         </div>
                         <div class="row res-soc col-16 col-m-16 col-s-16">

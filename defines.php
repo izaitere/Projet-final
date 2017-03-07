@@ -4,6 +4,5 @@
  */
 define('NOM_SITE', 'FlowerDesign');
 define('CAT_ID','catid');
-define('ARTICLE_ID','article_id');
-
+define('ARTICLE_ID','id_art');
 

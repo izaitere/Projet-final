@@ -64,45 +64,43 @@ if($en_reception && $nom_valide && $prenom_valide && $email_valide && $ad_valide
             <form id="formulaire" action="<?= basename(__FILE__) ?>" method="post">
             <!-- method GET par defaut, POST si précisé -->
             <div class="<?= $nom_valide ? '' : 'invalid' ?>">
-                <label for="saisie_nom">Nom : </label>
+                <label for="saisie_nom">Nom<sup>*champ obligatoire</sup></label>
                 <input type="text" placeholder="(entrez votre nom)" id="saisie_nom" name="saisie_nom" value="<?= $nom ?>"/>
                 <?php if ( ! $nom_valide) { ?>
                     <p>le nom doit contenir au moins un caractere</p>
                 <?php } ?>
             </div>
             <div class="<?= $prenom_valide ? '' : 'invalid' ?>">
-                <label for="saisie_prenom">Prénom : </label>
+                <label for="saisie_prenom">Prénom<sup>*champ obligatoire</sup></label>
                 <input type="text" placeholder="(entrez votre prénom)" id="saisie_prenom" name="saisie_prenom" value="<?= $prenom ?>"/>
                 <?php if ( ! $prenom_valide) { ?>
                     <p>le prenom doit contenir au moins deux caracteres, le premier etant une majuscule</p>
                 <?php } ?>
             </div>
             <div class="<?= $email_valide ? '' : 'invalid' ?>">
-                <label for="saisie_email">Courriel : </label>
+                <label for="saisie_email">Courriel<sup>*champ obligatoire</sup></label>
                 <input type="text" placeholder="(entrez votre courriel)" id="saisie_email" name="saisie_email" value="<?= $email ?>"/>
                 <?php if ( ! $email_valide) { ?>
                     <p>Vérifiez votre adresse mail </p>
                 <?php } ?>
             </div>
             <div>
-            <label for="tel">Télephone</label>
+            <label for="tel">Télephone<sup>*champ obligatoire</sup></label>
             <input type="tel" name="tel" placeholder="514-332-4567" id="tel" pattern="^\(?\d{3}\)?(-| )?\d{3}(-| )?\d{4}$"/>
             </div>
             <div class="<?= $ad_valide ? '' : 'invalid' ?>">
-                <label for="saisie_ad">Adresse </label>
+                <label for="saisie_ad">Adresse<sup>*champ obligatoire</sup></label>
                 <input type="text" placeholder="(entrez votre adresse)" id="saisie_ad" name="saisie_ad" value="<?= $ad ?>"/>
                 <?php if ( ! $ad_valide) { ?>
-                    <p>le nom doit contenir au moins huit caractere</p>
+                    <p>L'adresse doit contenir trois mots</p>
                 <?php } ?>
             </div>
-
-
             <div>
                 <label for="cp">Code postal</label>
                 <input type="tel" name="cp" placeholder="H3S 1R4" id="cp" pattern="^[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}(\-| |){1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}$"/>
             </div>
             <div>
-                <label for="ville">Ville:</label>
+                <label for="ville">Ville</label>
                 <select name="ville" id="ville">
                     <option value="-1">Choisir...</option>
                     <option value="mo">Montréal</option>
@@ -112,34 +110,35 @@ if($en_reception && $nom_valide && $prenom_valide && $email_valide && $ad_valide
                 </select>
 
             </div>
-
-            <div>
-                <label id="comment" for="commentaire">Commentaire:</label>
-                <textarea name="comment" rows="5" cols="40"></textarea>
-            </div>
             <div class="radio">
-
+                <div >
+                    <label id="rad1">Homme</label>
             <input type="radio" name="gender"
+
                 <?php if (isset($gender) && $gender == "homme") echo "checked"; ?>
-                   value="homme"> Homme
-            <input type="radio" name="gender"
+                   value="homme">
+                </div>
+                <div id="rad2">
+                    <label>Femme</label>
+
+                    <input type="radio" name="gender"
                 <?php if (isset($gender) && $gender == "femme") echo "checked"; ?>
-                   value="femme"> Femme
+                   value="femme">
+                </div>
+            </div>
+            <div>
+                Veuillez sélectionner une date et une heure précise de livraison
+                <input type="datetime-local" name="bdaytime"><sup>*champ obligatoire</sup>
                 <p><strong>Note:</strong>type="datetime-local"n'est pas supportée par Firefox, ou Internet Explorer 12(versions antérieures comprises).</p>
-            </div>
-            <div>
-                Veuillez sélectionner une date et une heure précise de livraison:
-                <input type="datetime-local" name="bdaytime">
-            </div>
-            <div>
 
             </div>
-
-
-
+                <div >
+                    <label id="comment" for="commentaire">Commentaire</label>
+                    <textarea name="comment" rows="5" cols="40"></textarea>
+                </div>
 
             <div>
-                <input type="reset" value="reset">
+                <input type="reset" value="Reset">
                 <input id="contact" type="submit" value="Soumettre"/>
             </div>
         </form>
